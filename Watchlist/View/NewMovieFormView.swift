@@ -51,8 +51,14 @@ struct NewMovieFormView: View {
                 
                 // MARK: - SAVE BUTTON
                 Button {
-                    addNewMovie()
-                    dismiss()
+                    if title.isEmpty || title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        print("Input is Invaild")
+                        return
+                    } else {
+                        print("Valid input: \(title) - \(selectedGenre)")
+                        addNewMovie()
+                        dismiss()
+                    }
                 } label: {
                     Text("Save")
                         .font(.title2.weight(.medium))
@@ -61,7 +67,7 @@ struct NewMovieFormView: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.extraLarge)
                 .buttonBorderShape(.roundedRectangle)
-                
+                .disabled(title.isEmpty || title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 // MARK: - CANCEL BUTTON
                 Button {
                     dismiss()
