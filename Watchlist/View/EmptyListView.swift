@@ -24,7 +24,7 @@ struct EmptyListView: View {
                         .foregroundStyle(Color(UIColor.secondarySystemBackground))
                         .padding(.top, -6)
                 }
-                .padding(.bottom, 90)
+                .padding(.bottom, 150)
         } description: {
             GroupBox {
                 TabView {
