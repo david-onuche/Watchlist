@@ -39,19 +39,19 @@ extension Genre {
             "Documentory"
         case .drama:
             "Drama"
-        case .fantasy
+        case .fantasy:
             "Fantasy"
-        case .kids
+        case .kids:
             "Kids"
-        case .musical
+        case .musical:
             "Musical"
-        case .scifi
+        case .scifi:
             "Sci-Fi"
-        case .romance
+        case .romance:
             "Romance"
-        case .thiller
+        case .thiller:
             "Thiller"
-        case .western
+        case .western:
             "Western"
         }
     }
